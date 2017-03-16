@@ -47,9 +47,7 @@ function start() {
       tar zxvf  leanote.tgz
       rm -rf leanote.tgz
       export PATH=$PATH:$OPENSHIFT_REPO_DIR/leanote/bin
-      wget https://github.com/chio-nzgft/openshift-go-revel-leanote/raw/master/lib/mongorestore
-      chmod +x mongorestore
-      ./mongorestore -h $OPENSHIFT_MONGODB_IP -d leanote --dir ./leanote/mongodb_backup/leanote_install_data/
+      ${OPENSHIFT_DATA_DIR}.mongodb/bin/mongorestore -h $OPENSHIFT_MONGODB_IP -d leanote --dir ./leanote/mongodb_backup/leanote_install_data/
       sed -i 's/http.addr=/http.addr='$(echo $OPENSHIFT_DIY_IP)'/g' leanote/conf/app.conf
       sed -i 's/http.port=9000/http.port='$(echo $OPENSHIFT_DIY_PORT)'/g' leanote/conf/app.conf
       sed -i 's/db.host=127.0.0.1/db.host='$(echo $OPENSHIFT_MONGODB_IP)'/g' leanote/conf/app.conf
