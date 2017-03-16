@@ -13,5 +13,12 @@ rhc cartridge stop icflorescu-mongodb-3.4.1 --app leanote
 
 rhc cartridge start icflorescu-mongodb-3.4.1 --app leanote
 
+# create app
+
+    rhc create-app leanote diy  https://raw.githubusercontent.com/chio-nzgft/openshift-leanote-bin/master/metadata/manifest.yml
+    
+# restart mongodb to build leanote web
+
+    rhc cartridge restart icflorescu-mongodb-3.4.1 --app leanote
 
 
