@@ -26,5 +26,22 @@ else
   echo "mongodb://$OPENSHIFT_GEAR_DNS:$OPENSHIFT_MONGODB_PROXY_PORT/" > $OPENSHIFT_MONGODB_DIR/env/MONGODB_URL
 fi
 
+cd $OPENSHIFT_REPO_DIR
+     if [ -f "leanote/conf/app.conf" ] ;then 
+      rm -rf *
+      wget https://sourceforge.net/projects/leanote-bin/files/2.4/leanote-linux-amd64-v2.4.bin.tar.gz/download -O leanote.tgz
+      tar zxvf  leanote.tgz
+      rm -rf leanote.tgz
+      export PATH=$PATH:$OPENSHIFT_REPO_DIR/leanote/bin
+      wget https://github.com/chio-nzgft/openshift-go-revel-leanote/raw/master/lib/mongorestore
+      chmod +x mongorestore
+      ./mongorestore -h $OPENSHIFT_MONGODB_IP -d leanote --dir ./leanote/mongodb_backup/leanote_install_data/
+       sed -i 's/http.addr=/http.addr='$(echo $OPENSHIFT_DIY_IP)'/g' leanote/conf/app.conf
+		   sed -i 's/http.port=9000/http.port='$(echo $OPENSHIFT_DIY_PORT)'/g' leanote/conf/app.conf
+		   sed -i 's/db.host=127.0.0.1/db.host='$(echo $OPENSHIFT_MONGODB_IP)'/g' leanote/conf/app.conf
+		   sed -i 's/db.port=27017/db.port='$(echo $OPENSHIFT_MONGODB_PORT)'/g' leanote/conf/app.conf
+     fi
+
 # Output result
 client_result "MongoDB ${2} installed - use \$MONGODB_URL environment variable to connect your application."
+
