@@ -1,8 +1,6 @@
-# Custom MongoDB cartridge for OpenShift 
-# from https://github.com/icflorescu/openshift-cartridge-mongodb
-# include leanote-bin code
+# Custom MongoDB +  leanote cartridge for OpenShift 
 
-# custom cartridge providing MongoDB 3.4.x + leanote-bin web
+base by  https://github.com/icflorescu/openshift-cartridge-mongodb
 
 # create app
 
