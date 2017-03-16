@@ -4,7 +4,7 @@ base by  https://github.com/icflorescu/openshift-cartridge-mongodb
 
 # create app
 
-    rhc create-app leanote diy  https://raw.githubusercontent.com/chio-nzgft/openshift-leanote-bin/master/metadata/manifest.yml
+    rhc create-app leanote diy  https://raw.githubusercontent.com/echochio-tw/openshift-leanote-bin/master/metadata/manifest.yml
     
 # use Browser ....
 uaser : admin
