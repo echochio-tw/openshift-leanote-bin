@@ -6,8 +6,12 @@ base by  https://github.com/icflorescu/openshift-cartridge-mongodb
 
     rhc create-app leanote diy  https://raw.githubusercontent.com/chio-nzgft/openshift-leanote-bin/master/metadata/manifest.yml
     
-# restart mongodb to build leanote web
+# use Browser ....
+uaser : admin
+pasword : abc123
 
-    rhc cartridge restart chiotest-mongodb-3.4.1 --app leanote
+
+
+   
 
 
