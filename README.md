@@ -2,6 +2,8 @@
 
 base by  https://github.com/icflorescu/openshift-cartridge-mongodb
 
+for  OpenShift diy-0.1
+
 # create app
 
     rhc create-app leanote diy  https://raw.githubusercontent.com/echochio-tw/openshift-leanote-bin/master/metadata/manifest.yml
