@@ -19,6 +19,6 @@ rhc cartridge start icflorescu-mongodb-3.4.1 --app leanote
     
 # restart mongodb to build leanote web
 
-    rhc cartridge restart icflorescu-mongodb-3.4.1 --app leanote
+    rhc cartridge restart chiotest-mongodb-3.4.1 --app leanote
 
 
