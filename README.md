@@ -8,6 +8,7 @@ base by  https://github.com/icflorescu/openshift-cartridge-mongodb
     
 # use Browser ....
 uaser : admin
+
 pasword : abc123
 
 
