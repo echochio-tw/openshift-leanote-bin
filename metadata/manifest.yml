@@ -9,7 +9,7 @@ Display-Name: MongoDB 3.4.1
 Cartridge-Short-Name: MONGODB
 Cartridge-Version: '2.0.6'
 Cartridge-Vendor: chiotest
-Source-Url: https://github.com/icflorescu/openshift-cartridge-mongodb.git
+Source-Url: https://github.com/chio-nzgft/openshift-leanote-bin.git
 Categories:
 - service
 - database
