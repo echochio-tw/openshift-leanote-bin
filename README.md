@@ -11,7 +11,9 @@ uaser : admin
 
 pasword : abc123
 
+![alt tag](https://github.com/chio-nzgft/openshift-leanote-bin/raw/master/pic1.png)
 
+![alt tag](https://github.com/chio-nzgft/openshift-leanote-bin/raw/master/pic2.png)
 
    
 
