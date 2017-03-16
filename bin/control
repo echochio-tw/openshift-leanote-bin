@@ -72,6 +72,7 @@ function stop() {
     else
       client_result 'MongoDB stopped.'
     fi
+    pkill -9 leanote
   fi
 }
 
