@@ -51,9 +51,9 @@ function start() {
       chmod +x mongorestore
       ./mongorestore -h $OPENSHIFT_MONGODB_IP -d leanote --dir ./leanote/mongodb_backup/leanote_install_data/
       sed -i 's/http.addr=/http.addr='$(echo $OPENSHIFT_DIY_IP)'/g' leanote/conf/app.conf
-	    sed -i 's/http.port=9000/http.port='$(echo $OPENSHIFT_DIY_PORT)'/g' leanote/conf/app.conf
-	    sed -i 's/db.host=127.0.0.1/db.host='$(echo $OPENSHIFT_MONGODB_IP)'/g' leanote/conf/app.conf
-	    sed -i 's/db.port=27017/db.port='$(echo $OPENSHIFT_MONGODB_PORT)'/g' leanote/conf/app.conf
+      sed -i 's/http.port=9000/http.port='$(echo $OPENSHIFT_DIY_PORT)'/g' leanote/conf/app.conf
+      sed -i 's/db.host=127.0.0.1/db.host='$(echo $OPENSHIFT_MONGODB_IP)'/g' leanote/conf/app.conf
+      sed -i 's/db.port=27017/db.port='$(echo $OPENSHIFT_MONGODB_PORT)'/g' leanote/conf/app.conf
      fi
     
     bash leanote/bin/run.sh > leanote.log 2>&1 &
